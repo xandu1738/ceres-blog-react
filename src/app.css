@@ -1,0 +1,114 @@
+body {
+  /* background-color: #B0EAB9 ; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .app {
+  padding: 20px;
+  border-radius: 5px;
+  padding: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #B0EAB9;
+} */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle-button {
+  justify-self: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+}
+.button-content {
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text {
+  margin-left: 5px;
+}
+input,
+textarea {
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #dede;
+  font-size: 14px;
+  border-radius: 4px;
+  outline: none;
+}
+input:focus,
+textarea:focus {
+  border-color: aliceblue;
+  box-shadow: 0 0 5px rgba(30, 15, 20, 0.5);
+}
+button {
+  padding: 13px 30px;
+  border: none;
+  border-radius: 4px;
+  background-color: blue;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(20, 41, 40);
+}
+button:active {
+  background-color: rgb(164, 236, 224);
+}
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(125, 236, 212, 0.5);
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form-container {
+  justify-content: center;
+  align-items: center;
+}
+.blog-card {
+  margin-top: 20px;
+  background-color: rgb(214, 226, 214);
+  border-radius: 4px;
+  padding: 20px 10px 0px 10px;
+  box-shadow: 0 2px 4px rgba(1, 51, 11, 0.5);
+}
+.blog-title {
+  font-size: 20px;
+  margin: 10px;
+}
+.blog-body {
+  font-size: 16px;
+  color: #3f3c3c;
+}
+.publish-date,
+.uploaded-by {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  color: #504e4e;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.blog-form{
+    padding: 20px;
+    background-color: #6af15d;
+    border-radius: 4px;
+}
+.reactions{
+    display: flex;
+    flex-direction: row;
+}
+.button{
+    cursor: pointer;
+}
