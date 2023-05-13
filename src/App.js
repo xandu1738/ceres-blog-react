@@ -78,6 +78,16 @@ function App() {
       date_published: "2023-05-01",
     },
   ]);
+  const onLike = (id) => {};
+  const onComment = () => {};
+  const onDelete = (id) => {
+    setPosts(posts.filter((post) => post.id !== id));
+  };
+  const makePost = (post) => {
+    const id = Math.floor(Math.random() * 10000) + 1;
+    const newPost = { id, ...post };
+    setPosts([...posts, newPost]);
+  };
 
   return (
     <div className="app">
@@ -90,32 +100,18 @@ function App() {
         />
       </header>
       <div className="form-container">
-        {enable && (
-          <AddBlog
-            onAdd={(post) => {
-              const id = Math.floor(Math.random() * 10000) + 1;
-              const newPost = { id, ...post };
-              setPosts(...posts, newPost);
-            }}
-          />
-        )}
+        {enable && <AddBlog onAdd={makePost} />}
       </div>
-      {posts.map((post) => (
+      {posts.length > 0 ? (
         <BlogList
-          key={post.id}
-          id={post.id}
-          title={post.title}
-          body={post.body}
-          uploaded_by={post.uploaded_by}
-          date={post.date_published}
-          onLike={(id) => {
-            console.log("Liked " + id);
-          }}
-          onComment={(id) => {
-            console.log("Commented on " + id);
-          }}
+          posts={posts}
+          onLike={onLike}
+          onDelete={onDelete}
+          onComment={onComment}
         />
-      ))}
+      ) : (
+        "No posts to show"
+      )}
     </div>
   );
 }

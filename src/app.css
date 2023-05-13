@@ -86,6 +86,11 @@ button:focus {
 .blog-title {
   font-size: 20px;
   margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.blog-title FaTimes {
+  cursor: pointer;
 }
 .blog-body {
   font-size: 16px;
@@ -100,15 +105,15 @@ button:focus {
   text-decoration: none;
   border-radius: 4px;
 }
-.blog-form{
-    padding: 20px;
-    background-color: #6af15d;
-    border-radius: 4px;
+.blog-form {
+  padding: 20px;
+  background-color: #6af15d;
+  border-radius: 4px;
 }
-.reactions{
-    display: flex;
-    flex-direction: row;
+.reactions {
+  display: flex;
+  flex-direction: row;
 }
-.button{
-    cursor: pointer;
+.button {
+  cursor: pointer;
 }
