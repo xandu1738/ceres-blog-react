@@ -5,7 +5,7 @@ import "./app.css";
 import BlogList from "./pages/BlogList";
 
 function App() {
-  const [enable, setEnable] = useState(true);
+  const [enable, setEnable] = useState(false);
   const [posts, setPosts] = useState([
     {
       id: 1,

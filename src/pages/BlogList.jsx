@@ -1,7 +1,10 @@
-import React from "react";
-import { FaThumbsUp, FaComment } from "react-icons/fa";
+import React, { useState } from "react";
+import LikeButton from "../components/LikeButton";
+import CommentButton from "../components/CommentButton";
+import CommentForm from "../components/CommentForm";
 
-const BlogList = ({ onLike, onComment, posts }) => {
+const BlogList = ({ posts }) => {
+  const [showComments, setShowComments] = useState(false);
   return (
     <div>
       {posts.map((post) => (
@@ -11,16 +14,24 @@ const BlogList = ({ onLike, onComment, posts }) => {
           <div className="uploaded-by">{post.uploaded_by}</div>
           <div className="publish-date">{post.date}</div>
           <div className="card-actions">
-            <FaThumbsUp
-              onClick={onLike(post.id)}
-              className="icon"
-              style={{ padding: "20px", color: "#777", cursor: "pointer" }}
-            />
-            <FaComment
-              onClick={onComment}
-              className="icon"
-              style={{ padding: "20px", color: "#777", cursor: "pointer" }}
-            />
+            <div
+              style={{
+                display: "flex",
+                // justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <LikeButton />
+              <CommentButton
+                showComment={() => {
+                  setShowComments(!showComments);
+                }}
+              />
+            </div>
+            <hr />
+            <>
+              <CommentForm />
+            </>
           </div>
         </div>
       ))}
