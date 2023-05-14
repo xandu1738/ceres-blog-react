@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import LikeButton from "../components/LikeButton";
 import CommentButton from "../components/CommentButton";
 import CommentForm from "../components/CommentForm";
 
 const BlogList = ({ posts }) => {
-  const [showComments, setShowComments] = useState(false);
+  // const [showComments, setShowComments] = useState(false);
   return (
     <div>
       {posts.map((post) => (
@@ -22,11 +22,7 @@ const BlogList = ({ posts }) => {
               }}
             >
               <LikeButton />
-              <CommentButton
-                showComment={() => {
-                  setShowComments(!showComments);
-                }}
-              />
+              <CommentButton />
             </div>
             <hr />
             <>
