@@ -11,7 +11,7 @@ const CommentForm = () => {
     e.target.comment.value = "";
   };
   return (
-    <div style={{paddingBottom:"10px"}}>
+    <div style={{ paddingBottom: "10px" }}>
       <form className="comment" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -23,7 +23,12 @@ const CommentForm = () => {
         <input type="submit" value="comment" />
       </form>
       {comments.map((comment) => (
-        <div className="comment-card">{comment.content}</div>
+        <div className="comment-card">
+          <p>
+            <span>James Gunn: </span>
+            {comment.content}
+          </p>
+        </div>
       ))}
     </div>
   );

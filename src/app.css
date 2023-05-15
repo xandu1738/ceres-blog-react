@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap");
+
 body {
   /* background-color: #B0EAB9 ; */
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,7 +111,7 @@ button:focus {
 }
 .blog-form {
   padding: 20px;
-  background-color: #6af15d;
+  background-color: #b6b6b6;
   border-radius: 4px;
 }
 .reactions {
@@ -128,8 +132,39 @@ button:focus {
 }
 .comment-card {
   background-color: #a6fdaa;
-  padding: 15px;
+  padding: 0 0 0 15px;
   border: 1px solid white;
   border-radius: 0 0 20px 0;
   margin: 10px;
 }
+.comment-card p span {
+  font-weight: bold;
+}
+.blog-detail {
+  border: 1px solid white;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a6fdaa;
+  margin: 20px;
+}
+.left-content {
+  justify-content: center;
+  width: 60%;
+  margin: 20px;
+  padding-right: 30px;
+}
+.right-content {
+  width: 40%;
+}
+.right-content p span {
+  font-weight: bold;
+}
+.profile-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+/* .details{} */

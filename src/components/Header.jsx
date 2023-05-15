@@ -1,9 +1,9 @@
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
-const Header = ({ text, showForm, onToggle }) => {
+const Header = ({ showForm, onToggle }) => {
   return (
     <header>
-      <h1>C E R E S blog</h1>
+      <h1 style={{ fontSize: "50px" }}>C E R E S</h1>
       <button
         className="toggle-button"
         onClick={onToggle}

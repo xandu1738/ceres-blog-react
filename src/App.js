@@ -1,8 +1,11 @@
 import Header from "./components/Header";
 import AddBlog from "./pages/AddBlog";
 import React, { useState } from "react";
+// import {BrowserRouter as Router} from 'react-router-dom'
 import "./app.css";
 import BlogList from "./pages/BlogList";
+// import BlogDetail from "./pages/BlogDetail";
+// import { Routes } from "react-router-dom";
 
 function App() {
   const [enable, setEnable] = useState(false);
@@ -112,6 +115,7 @@ function App() {
       ) : (
         "No posts to show"
       )}
+      {/* <BlogDetail /> */}
     </div>
   );
 }
